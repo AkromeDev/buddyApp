@@ -1,0 +1,77 @@
+{
+  "name": "Buddy",
+  "fields": [
+    {
+      "fieldName": "firstName",
+      "fieldType": "String",
+      "javadoc": "The firstname attribute.",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "lastName",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "phoneNumber",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "balance",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "buddy",
+      "relationshipName": "user",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "bankAccount",
+      "otherEntityRelationshipName": "buddy",
+      "relationshipName": "bankAccount",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "contactRelationship",
+      "otherEntityRelationshipName": "buddy",
+      "relationshipName": "contactRelationship"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "myTransaction",
+      "otherEntityRelationshipName": "buddy",
+      "relationshipName": "myTransaction"
+    }
+  ],
+  "changelogDate": "20210216131717",
+  "javadoc": "The Buddy entity.",
+  "entityTableName": "buddy",
+  "dto": "no",
+  "pagination": "infinite-scroll",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

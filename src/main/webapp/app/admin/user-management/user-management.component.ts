@@ -84,7 +84,7 @@ export default class JhiUserManagementComponent extends mixins(AlertMixin) {
     this.userManagementService()
       .remove(this.removeId)
       .then(res => {
-        const message = res.headers['x-buddyapp-alert'];
+        const message = res.headers['x-paymentsystemapp-alert'];
         this.alertService().showAlert(message, 'danger');
         this.getAlertFromStore();
         this.removeId = null;

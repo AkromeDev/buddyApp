@@ -1,0 +1,41 @@
+{
+  "name": "ContactRelationship",
+  "fields": [
+    {
+      "fieldName": "userId1",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "userId2",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "buddy",
+      "otherEntityRelationshipName": "contactRelationship",
+      "relationshipName": "buddy",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210216131817",
+  "entityTableName": "contact_relationship",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

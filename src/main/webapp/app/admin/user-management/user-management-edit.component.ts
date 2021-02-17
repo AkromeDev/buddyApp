@@ -105,6 +105,6 @@ export default class JhiUserManagementEdit extends Vue {
   }
 
   private getMessageFromHeader(res: any): any {
-    return res.headers['x-buddyapp-alert'];
+    return res.headers['x-paymentsystemapp-alert'];
   }
 }

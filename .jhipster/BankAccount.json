@@ -1,0 +1,37 @@
+{
+  "name": "BankAccount",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "iban",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "bic",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "buddy",
+      "otherEntityRelationshipName": "bankAccount",
+      "relationshipName": "buddy",
+      "ownerSide": false
+    }
+  ],
+  "changelogDate": "20210216132017",
+  "entityTableName": "bank_account",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

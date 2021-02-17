@@ -55,6 +55,6 @@ export default class ConfigurationService {
       }
     }
     // by default, use the default ApplicationContext Id
-    return res['contexts']['buddyApp']['beans'];
+    return res['contexts']['PaymentSystem']['beans'];
   }
 }

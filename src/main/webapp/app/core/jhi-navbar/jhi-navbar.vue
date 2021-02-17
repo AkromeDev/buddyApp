@@ -2,12 +2,12 @@
     <b-navbar toggleable="md" type="dark" class="bg-dark">
         <b-navbar-brand class="logo" b-link to="/">
             <span class="logo-img"></span>
-            <span class="navbar-title">buddyApp</span> <span class="navbar-version">{{version}}</span>
+            <span class="logo-span">PAY</span>MY<span class="logo-span">BUDDY</span>
         </b-navbar-brand>      
         <b-navbar-toggle 
         right 
         class="jh-navbar-toggler d-lg-none" 
-        href="javascript:void(0);"  
+        href="javascript:void(0);"
         data-toggle="collapse" 
         target="header-tabs" 
         aria-expanded="false" 
@@ -23,15 +23,35 @@
                         <span>Home</span>
                     </span>
                 </b-nav-item>
-                <b-nav-item-dropdown
+                    <b-nav-item-dropdown
                     right
                     id="entity-menu"
                     v-if="authenticated"
                     active-class="active" class="pointer">
                     <span slot="button-content" class="navbar-dropdown-menu">
                         <font-awesome-icon icon="th-list" />
-                        <span>Entities</span>
+                        <span>Services</span>
                     </span>
+                    <b-dropdown-item to="/buddy/view">
+                        <font-awesome-icon icon="asterisk" />
+                        <span >Buddy Account</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/bank-account/view">
+                        <font-awesome-icon icon="asterisk" />
+                        <span >Bank Account</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/contact-relationship">
+                        <font-awesome-icon icon="asterisk" />
+                        <span >Contacts</span>
+                    </b-dropdown-item>
+                    <!-- <b-dropdown-item to="/transaction-history">
+                        <font-awesome-icon icon="asterisk" />
+                        <span >TransactionHistory</span>
+                    </b-dropdown-item> -->
+                    <b-dropdown-item to="/my-transaction">
+                        <font-awesome-icon icon="asterisk" />
+                        <span >Transactions</span>
+                    </b-dropdown-item>
                     <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
                 </b-nav-item-dropdown>
                 <b-nav-item-dropdown
@@ -125,6 +145,22 @@
 /* ==========================================================================
     Navbar
     ========================================================================== */
+
+.bg-dark {
+    position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	min-height: 50px;
+	padding: 0 25px;
+	box-sizing: border-box;
+	background-color: rgba(255,255,255, 1);
+	box-shadow: 0 0 15px 2px rgba(0,0,0,0.7);
+	z-index: 100;
+	backface-visibility: hidden;
+	transition: 0.35s ease;
+}
+
 .navbar-version {
   font-size: 10px;
 }
@@ -152,6 +188,13 @@
     ========================================================================== */
 .navbar-brand.logo {
   padding: 5px 15px;
+  color: #E78533;
+  font-weight: 600;
+}
+
+.logo-span {
+  color: #f0f0f0;
+  font-weight: 600;
 }
 
 .logo .logo-img {
@@ -163,7 +206,7 @@
 
 .logo-img {
   height: 100%;
-  background: url("../../../content/images/logo-jhipster.png") no-repeat center
+  background: url("../../../content/images/signature-white.png") no-repeat center
     center;
   background-size: contain;
   width: 100%;

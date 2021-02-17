@@ -4,6 +4,12 @@
 Bootstrap tweaks
 ===============================================================*/
 
+// html * { border: 1px solid white !important }
+
+html {
+  background-color: #363636;
+}
+
 body,
 h1,
 h2,
@@ -13,7 +19,8 @@ h4 {
 }
 
 body {
-  margin: 0;
+  padding-top: 75px;
+  padding-bottom: 75px;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -49,10 +56,16 @@ Main page styles
 
 .hipster.img-fluid {
   display: inline-block;
-  width: 347px;
-  height: 497px;
-  background: url('../images/jhipster_family_member_1.svg') no-repeat center top;
+  width: 360px;
+  height: 300px;
+  background: url('../images/money-white.png') no-repeat;
   background-size: contain;
+}
+
+.col-md-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* wait autoprefixer update to allow simple generation of high pixel density media query */
@@ -63,7 +76,7 @@ Main page styles
   only screen and (min-resolution: 192dpi),
   only screen and (min-resolution: 2dppx) {
   .hipster {
-    background: url('../images/jhipster_family_member_1.svg') no-repeat center top;
+    background: url('../images/jhipster_family_member_2.svg') no-repeat center top;
     background-size: contain;
   }
 }
@@ -196,6 +209,27 @@ http://stackoverflow.com/questions/19562903/remove-padding-from-columns-in-boots
 http://stackoverflow.com/questions/23436430/bootstrap-3-input-group-100-width */
 .width-min {
   width: 1% !important;
+}
+
+/* ==========================================================================
+entity Text and background colors
+========================================================================== */
+
+.row {
+  color: $text-primary;
+}
+
+.table-striped {
+  background-color: $dark-primary;
+}
+
+.table thead th {
+  color: $text-primary;
+  border-bottom: 2px solid $text-primary;
+}
+
+#page-heading {
+  color: $text-title;
 }
 
 /* ==========================================================================
